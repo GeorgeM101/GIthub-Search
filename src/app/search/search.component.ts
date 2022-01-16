@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  title = "Search-Github"
+  searchTerm = ""
+  constructor() {
 
-  constructor() { }
+   }
 
   ngOnInit(): void {
+  }
+  gitSearch(): void{
+    console.log(this.searchTerm)
   }
 
 }
