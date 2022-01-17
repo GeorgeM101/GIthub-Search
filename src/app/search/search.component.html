@@ -1,6 +1,8 @@
-<div class="p-5">
-    <h2 class="mt-5" style="color:white;">{{title}}</h2>
-    <input type="text" class="form-control"placeholder="Enter User-Name" [(ngModel)]="searchTerm" >
-    <br>
-    <input type="button" value="Submit" class="btn btn-success"(click)="gitSearch()">
+<div class="container">
+    <h2 class="mt-4 text-center">GitHub Search</h2>
+        <div class="input-group mt-3 p-5">
+          <br>
+          <input type="text" class="form-control"placeholder="Enter User-Name" [(ngModel)]="userName" name="UserName"><br><br>
+          <button class="btn btn-outline-success"(click)="getUser()" >Search</button>
+        </div>
 </div>

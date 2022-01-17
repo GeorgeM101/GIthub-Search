@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchService } from '../service/search.service';
+import { subscribeOn } from 'rxjs';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-search',
@@ -7,24 +8,23 @@ import { SearchService } from '../service/search.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  title = "Search-Github"
 
-  searchTerm = "";
-  SearchService: any;
-  constructor(private searchService: SearchService) {
-
-   }
+    userName = ''
+  constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
   }
-  gitSearch(): void{
-    if (this.searchTerm === "")return;
-    this.searchService.getUser(this.searchTerm)
+  getUser(): void{
+    if(this.userName === '')return;
+    this.searchService.getResults(this.userName)
     .subscribe(
-      (Response:any)=>{
-        this.SearchService.passResults({results:Response.value, count:Response.totalCount});
-      }
-      )
+      (response: any)=>{
+        console.log(response)
+      },
+      // (error:any)=>{
+      //   console.log(error); 
+      // }
+    )
   }
 
 }
