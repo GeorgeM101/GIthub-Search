@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../service/search.service';
 
 @Component({
   selector: 'app-search',
@@ -9,14 +10,21 @@ export class SearchComponent implements OnInit {
   title = "Search-Github"
 
   searchTerm = "";
-  constructor() {
+  SearchService: any;
+  constructor(private searchService: SearchService) {
 
    }
 
   ngOnInit(): void {
   }
   gitSearch(): void{
-    console.log(this.searchTerm)
+    if (this.searchTerm === "")return;
+    this.searchService.getUser(this.searchTerm)
+    .subscribe(
+      (Response:any)=>{
+        this.SearchService.passResults({results:Response.value, count:Response.totalCount});
+      }
+      )
   }
 
 }
