@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SearchService {
   apiKey = environment.APIkey;
-  userName = ''
+    userName = ''
 
   searchResults = new Subject()
 
