@@ -1,6 +1,11 @@
 * {
-  color: black;
+  color: white;
+  background-color: #0d1117;
 }
 .results {
   border: 1px solid black;
+}
+.container {
+  align-items: center;
+  font-size: 1.5em;
 }

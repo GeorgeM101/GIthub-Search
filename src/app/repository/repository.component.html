@@ -1,0 +1,18 @@
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Repo_Id</th>
+            <th scope="col">Repo_Name</th>
+            <th scope="col">Repo_forks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let repo of repository; let i = index">
+            <th scope="row"> {{ i + 1 }}</th>
+            <td> {{ repo.id }} </td>
+            <td> {{ repo.name }} </td>
+            <td> {{ repo.forks }} </td>
+        </tr>
+    </tbody>
+</table>

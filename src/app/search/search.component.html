@@ -1,8 +1,13 @@
 <div class="container">
     <h2 class="mt-4 text-center">GitHub Search</h2>
-        <div class="input-group mt-3 p-5">
-          <br>
+    <h6>Search User</h6>
+        <div class="input-group">
           <input type="text" class="form-control"placeholder="Enter User-Name" [(ngModel)]="userName" name="UserName"><br><br>
           <button class="btn btn-outline-success"(click)="getUser()" >Search</button>
         </div>
+        <br>
+
+      
 </div>
+<br>
+<app-user></app-user>
