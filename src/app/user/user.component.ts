@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+    results: any[] = [];
+    count = 0;
+
+  constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
+    this.searchService.getPassedResults()
+    .subscribe((response:any)=> {
+      // console.log(response);
+      
+      this.results.push(response.results);
+      this.count = response.count;
+      console.log(this.results, this.count);
+    }
+    )
   }
 
 }

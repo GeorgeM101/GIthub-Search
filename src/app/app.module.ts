@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
     AppComponent,
     UserComponent,
     SearchComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { subscribeOn } from 'rxjs';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -19,7 +18,7 @@ export class SearchComponent implements OnInit {
     this.searchService.getResults(this.userName)
     .subscribe(
       (response: any)=>{
-        console.log(response)
+        this.searchService.passResults({results:response, count:response.totalCount})
       },
       // (error:any)=>{
       //   console.log(error); 
