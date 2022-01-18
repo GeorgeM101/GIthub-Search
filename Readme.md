@@ -4,7 +4,7 @@ Web application that enables users to search for respositories and users in Gith
 
 ## Author
 
-Developed by George Mboya
+Developed by: George Mboya
 
 ## Project Link
 
