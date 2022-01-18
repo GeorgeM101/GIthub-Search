@@ -1,20 +1,19 @@
+<div class="container">
 <div class="results p-5">
     <h2>Results</h2>
     <div class="result" *ngFor="let result of results">
     <a [href]="result?.url" target="_blank"> 
         {{result?.title}}
     </a>
-
+    <img src="{{result?.avatar_url}}" width="150px">
     <a [href]="result?.url" class="url" target="_blank">{{result?.url}}</a>
     <p>{{result?.description}}</p>
     <p>Name: {{result?.name}}</p>
-    <div class="cards">
-        <div class="repos"> Date Created: {{ result?.created_at | date: 'short' }} </div>
-        <div class="repos"> Public Repo: {{ result?.public_repos }} </div>
+    <p>Date Created: {{ result?.created_at | date}}</p>
+    <p>Public Repo: {{ result?.public_repos }}</p>
+    <p>Followers: {{ result?.followers }}</p>
+    <p>Following: {{result?.following }}</p>  
     </div>
-   <div class="flex_cards">
-       <div class="follow"> Followers: {{ result?.followers }} </div>
-       <div class="follow"> Following: {{result?.following }} </div>
-   </div>
+    </div>
 </div>
-</div>
+
