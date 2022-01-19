@@ -9,7 +9,6 @@ import { SearchService } from '../search.service';
 export class UserComponent implements OnInit {
 
     results: any[] = [];
-    count = 0;
 
   constructor(private searchService: SearchService) { }
 
@@ -19,8 +18,7 @@ export class UserComponent implements OnInit {
       // console.log(response);
       
       this.results.push(response.results);
-      this.count = response.count;
-      console.log(this.results, this.count);
+      console.log(this.results);
     }
     )
   }

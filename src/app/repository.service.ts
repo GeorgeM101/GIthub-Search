@@ -14,8 +14,8 @@ export class RepositoryService {
 searchResults = new Subject()
 
 constructor(private http: HttpClient) { }
-getResults(repoName:string): Observable<any>{
-  return this.http.get('https://api.github.com/users/'+ repoName + '/repos'
+getResults(userName:string): Observable<any>{
+  return this.http.get('https://api.github.com/users/'+ userName + '/repos'
   ) 
 }
 passResults(results: any):void{

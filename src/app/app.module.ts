@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { SearchComponent } from './search/search.component';
 import { RepoSearchComponent } from './repo-search/repo-search.component';
 import { UserRepoComponent } from './user-repo/user-repo.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UserRepoComponent } from './user-repo/user-repo.component';
     SearchComponent,
     RepoSearchComponent,
     UserRepoComponent,
+    HeaderComponent,
 
   ],
   imports: [
