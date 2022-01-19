@@ -7,16 +7,16 @@ import { AppComponent } from './app.component';
 import{ HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { SearchComponent } from './search/search.component';
-import { RepositoryComponent } from './repository/repository.component';
-import { HomeComponent } from './home/home.component';
+import { RepoSearchComponent } from './repo-search/repo-search.component';
+import { UserRepoComponent } from './user-repo/user-repo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     SearchComponent,
-    RepositoryComponent,
-    HomeComponent,
+    RepoSearchComponent,
+    UserRepoComponent,
 
   ],
   imports: [

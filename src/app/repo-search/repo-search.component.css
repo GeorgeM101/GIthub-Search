@@ -1,0 +1,14 @@
+.container {
+  background-color: black;
+  color: white;
+  width: 50rem;
+  margin-top: 5em;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px 0px;
+}
+.row {
+  display: flex;
+}
+input {
+  border: none;
+}

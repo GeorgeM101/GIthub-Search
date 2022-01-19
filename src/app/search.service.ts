@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class SearchService {
   apiKey = environment.AccessToken;
     userName = ''
-
+    
   searchResults = new Subject()
 
   constructor(private http: HttpClient) { }
