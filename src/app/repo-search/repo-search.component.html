@@ -2,9 +2,10 @@
     <h2 class="mt-4 text-center">Repository Search</h2>
     <h6>Search User</h6>
         <div class="input-group">
-          <input type="text" class="form-control"placeholder="Enter User-Name" [(ngModel)]="userName" name="UserName"><br><br>
+          <input type="text" class="form-control"placeholder="Enter Repository" [(ngModel)]="userName" name="UserName"><br><br>
           <button class="btn btn-outline-success"(click)="getRepo()" >Search</button>
         </div>
         <br>
 </div>
-<br>
+<app-user-repo></app-user-repo>
+

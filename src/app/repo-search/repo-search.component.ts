@@ -18,7 +18,7 @@ export class RepoSearchComponent implements OnInit {
     this.searchService.getResults(this.userName)
     .subscribe(
       (response: any)=>{
-        this.searchService.passResults({results:response})
+        this.searchService.passResults({repository:response})
       },
       // (error:any)=>{
       //   console.log(error); 

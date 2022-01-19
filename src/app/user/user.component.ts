@@ -15,7 +15,6 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.searchService.getPassedResults()
     .subscribe((response:any)=> {
-      // console.log(response);
       
       this.results.push(response.results);
       console.log(this.results);

@@ -8,17 +8,18 @@ import { RepositoryService } from '../repository.service';
 })
 export class UserRepoComponent implements OnInit {
 
-  results: any[] = [];
+  results: any
 
   constructor(private repositoryService: RepositoryService) { }
 
   ngOnInit(): void {
     this.repositoryService.getPassedResults()
     .subscribe((response:any)=> {
-      // console.log(response);
       
-      this.results.push(response.results);
+      this.results = response.repository;
+      // console.log(response.repository);
       console.log(this.results);
+      
     }
     )
   }
